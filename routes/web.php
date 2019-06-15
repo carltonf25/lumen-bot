@@ -22,4 +22,11 @@ $router->group(['prefix' => 'api'], function () use ($router) {
     $router->post('users', ['uses' => 'UserController@create']); 
     $router->delete('users/{id}', ['uses' => 'UserController@delete']); 
     $router->put('users/{id}', ['uses' => 'UserController@update']); 
+
+    //Message endpoints
+    $router->get('messages', ['uses' => 'MessageController@showAllMessages']); 
+    $router->get('messages/{id}', ['uses' => 'MessageController@showOneMessage']); 
+    $router->post('messages', ['uses' => 'MessageController@create']); 
+    $router->delete('messages/{id}', ['uses' => 'MessageController@delete']); 
+    $router->put('messages/{id}', ['uses' => 'MessageController@update']); 
 });
