@@ -17,7 +17,7 @@ class Message extends Model
      * @var array
      */
     protected $fillable = [
-        'id', 'user_id', 'body', 'send_time', 'channel', 'has_sent'
+        'id', 'slack_user', 'body', 'send_time', 'channel', 'has_sent'
     ];
 
 }
